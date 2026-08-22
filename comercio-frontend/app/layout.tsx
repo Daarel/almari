@@ -1,9 +1,11 @@
 import './globals.css';
 
 import type { Metadata } from 'next';
-import { Bricolage_Grotesque } from 'next/font/google';
+import { Bricolage_Grotesque, Raleway } from 'next/font/google';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/src/lib/utils';
+
+const raleway = Raleway({subsets:['latin'],variable:'--font-sans'});
 
 const bricolage_Grotesque = Bricolage_Grotesque({
   subsets: ['latin'],
@@ -20,8 +22,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang="en" className={cn(bricolage_Grotesque.variable)}>
-      <body className="flex min-h-full flex-col">{children}</body>
+    <html lang="en" className={cn(bricolage_Grotesque.variable, 'dark', "font-sans", raleway.variable)}>
+      <body className="flex min-h-svh flex-col">{children}</body>
     </html>
   );
 }
