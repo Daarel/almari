@@ -24,7 +24,7 @@ const Header: FC = () => {
   const {resolvedTheme, setTheme} = useTheme();
 
   return (
-    <header className='sticky top-0 z-50 w-full bg-background/95 backdrop-blur-md border-b border-border flex justify-between items-center h-18 shadow-sm px-16 mx-auto'>
+    <header className='sticky top-0 z-50 w-full bg-background/50 backdrop-blur-md flex justify-between items-center h-18 shadow-sm px-16 mx-auto'>
       <div>
         <Link href='/' className='text-4xl font-light'>
           almari.

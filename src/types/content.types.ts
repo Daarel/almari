@@ -3,3 +3,10 @@ export type NavMenuType = {
   link: string;
   keywords: string[];
 };
+
+export type CategoryItemType = {
+  title: string;
+  imageSrc: string;
+  imageAlt: string;
+  href: string;
+};

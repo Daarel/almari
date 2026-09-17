@@ -37,7 +37,7 @@ export default function RootLayout({
         
         >
           <Header />
-          <main className='flex-1 px-16'>{children}</main>
+          <main className='flex-1'>{children}</main>
         </ThemeProvider>
       </body>
     </html>

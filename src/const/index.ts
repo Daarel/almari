@@ -1,4 +1,5 @@
-import { NavMenuType } from '@/types/content.types';
+import type { CarouselSlide } from '@/components/Carousel';
+import type { NavMenuType, CategoryItemType } from '@/types/content.types';
 
 const NAVMENU: NavMenuType[] = [
   {
@@ -50,4 +51,41 @@ const NAVMENU: NavMenuType[] = [
   },
 ];
 
-export { NAVMENU };
+const CATEGORIES: CategoryItemType[] = [
+  {
+    title: 'Atasan & Kemeja Tailored',
+    imageSrc: '/clothes.jpg',
+    imageAlt: 'Koleksi atasan dan kemeja tailored Almari',
+    href: '#',
+  },
+  {
+    title: 'Celana Wide-Leg',
+    imageSrc: '/pants.jpg',
+    imageAlt: 'Koleksi celana wide-leg modern Almari',
+    href: '#',
+  },
+  {
+    title: 'Gaun & Dress Minimalis',
+    imageSrc: '/dresses.jpg',
+    imageAlt: 'Koleksi gaun dan dress minimalis Almari',
+    href: '#',
+  },
+];
+
+const STORE_SLIDES: CarouselSlide[] = [
+  {
+    src: '/store-image-1.jpg',
+    alt: 'Suasana Toko Almari 1',
+  },
+  {
+    src: '/store-image-2.jpg',
+    alt: 'Suasana Toko Almari 2',
+  },
+  {
+    src: '/store-image-3.jpg',
+    alt: 'Suasana Toko Almari 3',
+  },
+];
+
+
+export { NAVMENU, CATEGORIES, STORE_SLIDES };

@@ -1,37 +1,42 @@
-import { Button } from '@/components/ui/button';
-import Image from 'next/image';
 import type { FC } from 'react';
+
+import { Button } from '@/components/ui/button';
+import EmblaCarousel from '@/components/Carousel';
+import { STORE_SLIDES } from '@/const';
 
 const Hero: FC = () => {
   return (
-    <section className='flex flex-row justify-center items-center h-[calc(100dvh-4.5rem)] w-full gap-24'>
-      <div className='flex flex-col justify-start items-start gap-10'>
-        <h1 className='font-extralight text-7xl'>
-          Siluet Presisi,
-          <br /> Tanpa
-          <br /> Keraguan.
-        </h1>
-        <p className='font-extralight text-base'>
-          Koleksi esensial modern yang dirancang dengan
-          <br />
-          teknologi Virtual Try-On cerdas agar Anda tidak
-          <br />
-          perlu lagi ragu memilih ukuran.
-        </p>
-        <div className='flex flex-row justify-start items-start gap-4'>
-          <Button shape="square" className='w-50 h-12' variant='default'>Belanja Koleksi</Button>
-          <Button shape="square" className='w-50 h-12' variant='outline'>Coba Fitting Virtual</Button>
-        </div>
-      </div>
-      <div className='flex flex-col justify-center items-center shadow-xl'>
-        <Image
-          src='/hero-imagez.webp'
-          alt='A beautiful woman with an elegant outfit on a park'
-          height={450}
-          width={450}
-          className='h-auto'
-          priority
+    <section className='relative flex h-dvh w-full items-center overflow-hidden px-8 sm:px-16 -mt-18 pt-18'>
+      <div className='absolute inset-0 -z-10 h-full w-full'>
+        <EmblaCarousel
+          slides={STORE_SLIDES}
+          slideHeight='h-full'
+          className='h-full w-full'
+          quality={60}
+          autoplayDelay={4000}
         />
+        <div className='absolute inset-0 bg-linear-to-r from-background/95 via-background/60 to-background/25 dark:from-background/95 dark:via-background/80 dark:to-background/35' />
+      </div>
+
+      <div className='relative z-10 flex max-w-3xl flex-col items-start justify-start gap-8'>
+        <h1 className='text-7xl font-extralight tracking-tight sm:text-8xl'>
+          Siluet Presisi
+          <br />
+          Tanpa Keraguan.
+        </h1>
+        <p className='text-base font-extralight sm:text-lg'>
+          Koleksi esensial modern yang dirancang dengan teknologi
+          <br />
+          Virtual Try-On cerdas agar Anda tidak perlu lagi ragu memilih ukuran.
+        </p>
+        <div className='flex flex-row items-start justify-start gap-4 mt-10'>
+          <Button shape='square' className='h-12 w-50' variant='default'>
+            Belanja Koleksi
+          </Button>
+          <Button shape='square' className='h-12 w-50' variant='outline'>
+            Coba Fitting Virtual
+          </Button>
+        </div>
       </div>
     </section>
   );
