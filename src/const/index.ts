@@ -1,5 +1,9 @@
 import type { CarouselSlide } from '@/components/Carousel';
-import type { NavMenuType, CategoryItemType } from '@/types/content.types';
+import type {
+  NavMenuType,
+  CategoryItemType,
+  ProductChoicesType,
+} from '@/types/content.types';
 
 const NAVMENU: NavMenuType[] = [
   {
@@ -49,19 +53,19 @@ const NAVMENU: NavMenuType[] = [
       'Diskon s/d 70%',
     ],
   },
-];
+] as const;
 
 const CATEGORIES: CategoryItemType[] = [
   {
-    title: 'Atasan & Kemeja Tailored',
+    title: 'Atasan & Sweater Tailored',
     imageSrc: '/clothes.jpg',
-    imageAlt: 'Koleksi atasan dan kemeja tailored Almari',
+    imageAlt: 'Koleksi atasan dan sweater tailored Almari',
     href: '#',
   },
   {
-    title: 'Celana Wide-Leg',
+    title: 'Celana Jeans',
     imageSrc: '/pants.jpg',
-    imageAlt: 'Koleksi celana wide-leg modern Almari',
+    imageAlt: 'Koleksi celana jeans modern Almari',
     href: '#',
   },
   {
@@ -70,7 +74,7 @@ const CATEGORIES: CategoryItemType[] = [
     imageAlt: 'Koleksi gaun dan dress minimalis Almari',
     href: '#',
   },
-];
+] as const;
 
 const STORE_SLIDES: CarouselSlide[] = [
   {
@@ -85,7 +89,16 @@ const STORE_SLIDES: CarouselSlide[] = [
     src: '/store-image-3.jpg',
     alt: 'Suasana Toko Almari 3',
   },
-];
+] as const;
 
+const PRODUCT_CHOICES: ProductChoicesType[] = [
+  {
+    label: 'SEMUA',
+    value: 'semua',
+  },
+  { label: 'ATASAN', value: 'atasan' },
+  { label: 'BAWAHAN', value: 'bawahan' },
+  { label: 'GAUN', value: 'gaun' },
+] as const;
 
-export { NAVMENU, CATEGORIES, STORE_SLIDES };
+export { NAVMENU, CATEGORIES, STORE_SLIDES, PRODUCT_CHOICES };

@@ -33,10 +33,11 @@ const Hero: FC = () => {
           <Button shape='square' className='h-12 w-50' variant='default'>
             Belanja Koleksi
           </Button>
-          <Button shape='square' className='h-12 w-50' variant='outline'>
+          <Button shape='square' className='h-12 w-50 ' variant='outline'>
             Coba Fitting Virtual
           </Button>
         </div>
+        
       </div>
     </section>
   );
