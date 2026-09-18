@@ -5,7 +5,7 @@ import type { FC } from 'react';
 
 const ShopByCategory: FC = () => {
   return (
-    <section className='flex min-h-screen w-full items-center justify-center overflow-hidden bg-secondary px-6 py-20'>
+    <section className='flex min-h-screen w-full items-center justify-center overflow-hidden px-6 py-20'>
       <div className='flex flex-col items-center justify-center gap-6 sm:gap-16 md:flex-row'>
         {CATEGORIES.map((category) => (
           <CategoryCard

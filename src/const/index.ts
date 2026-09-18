@@ -53,15 +53,15 @@ const NAVMENU: NavMenuType[] = [
 
 const CATEGORIES: CategoryItemType[] = [
   {
-    title: 'Atasan & Kemeja Tailored',
+    title: 'Atasan & Sweater Tailored',
     imageSrc: '/clothes.jpg',
-    imageAlt: 'Koleksi atasan dan kemeja tailored Almari',
+    imageAlt: 'Koleksi atasan dan sweater tailored Almari',
     href: '#',
   },
   {
-    title: 'Celana Wide-Leg',
+    title: 'Celana Jeans',
     imageSrc: '/pants.jpg',
-    imageAlt: 'Koleksi celana wide-leg modern Almari',
+    imageAlt: 'Koleksi celana jeans modern Almari',
     href: '#',
   },
   {
