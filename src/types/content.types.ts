@@ -10,3 +10,8 @@ export type CategoryItemType = {
   imageAlt: string;
   href: string;
 };
+
+export type ProductChoicesType = {
+  label: string;
+  value: string;
+}
